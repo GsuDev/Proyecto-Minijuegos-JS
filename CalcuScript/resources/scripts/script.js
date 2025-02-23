@@ -1,6 +1,6 @@
 
 // El script tiene un problema y es que las operaciones se llevan a cabo en orden de escritura
-// y no en orden aritmético, habría que hacer tres bucles. Uno que primero repase la exponenciación
+// y no en orden aritmético, habría que hacer tres bucles en la función equals(). Uno que primero repase la exponenciación
 // otro que repase las multiplicaciónes y divisiones y otro final con las sumas y restas de forma que
 // cada bucle sustituya los elementos de la cadena de operaciones para que el siguiente pueda trabajar.
 
