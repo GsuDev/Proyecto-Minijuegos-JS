@@ -4,6 +4,8 @@
 // otro que repase las multiplicaciónes y divisiones y otro final con las sumas y restas de forma que
 // cada bucle sustituya los elementos de la cadena de operaciones para que el siguiente pueda trabajar.
 
+// LAURA DICE QUE ASÍ ESTÁ BIEN
+
 
 let result = document.getElementById('result') // Div donde se sacarán los resultados
 let screenNums = [] // Aquí se guardan uno a uno como elementos del vector los numeros en string
