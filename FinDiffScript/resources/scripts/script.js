@@ -86,7 +86,7 @@ let introHTML = `
         <h2>¿Cómo jugar?</h2>
         <p>
             <br>La imagen de la izquierda y la derecha<br> son muy similares... 
-            !Pero no son iguales¡<br><br> Encuentra las 7 diferencias ocultas 
+            ¡Pero no son iguales!<br><br> Encuentra las 7 diferencias ocultas 
             y haz <br>click en ellas <u>en la imagen de la izquierda</u>
         </p>
     </div>
