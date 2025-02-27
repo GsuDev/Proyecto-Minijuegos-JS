@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Barrio';
+    src: url(../fonts/Barrio-Regular.ttf);
+}
+@font-face {
+    font-family: 'Delius';
+    src: url(../fonts/Delius-Regular.ttf);
+}
 /* Reset CSS */
 * {
     margin: 0;
@@ -41,12 +49,27 @@ header {
     display: flex;
     justify-content: center;
 }
-
-#buttons-container {
+h1{
+    font-family: 'Barrio';
+    font-size: 5em;
+}
+h2{
+    font-size: 2.5em;
+}
+#intro-container{
+    display: flex;
+    gap: 3em;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.intro-text{
+    font-family: 'Delius';
+}
+#buttonData-container {
+
+    
     display: flex;
     flex-direction: column;
     gap: 1.5em;
