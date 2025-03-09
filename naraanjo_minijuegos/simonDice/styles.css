@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden; /* Evita la barra de desplazamiento */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: 'Arial', sans-serif;
+}
+
+.contenedor {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  max-height: 95%; /* Asegura que el contenido no exceda la pantalla */
+  overflow: hidden; /* Oculta cualquier desbordamiento */
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  color: #666;
+}
+
+#ronda {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cuadrado {
+  display: flex;
+  flex-wrap: wrap;
+  width: 440px; /* Ajustado para incluir el margen */
+  gap: 10px; /* Añadir espacio entre los cuadrados */
+}
+
+.cuadrado div {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s; /* Animación suave al hacer clic */
+  cursor: pointer;
+}
+
+.cuadrado div:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/*Color de cada cuadrado*/
+.figura-1 { background-color: #FF5733; }
+.figura-2 { background-color: #33FF57; }
+.figura-3 { background-color: #5733FF; }
+.figura-4 { background-color: #FF33A1; }
+.figura-5 { background-color: #A1FF33; }
+.figura-6 { background-color: #33A1FF; }
+.figura-7 { background-color: #FF9133; }
+.figura-8 { background-color: #33FF91; }
+.figura-9 { background-color: #9133FF; }
+.figura-10 { background-color: #FF33F1; }
+.figura-11 { background-color: #F1FF33; }
+.figura-12 { background-color: #33F1FF; }
+.figura-13 { background-color: #A1F133; }
+.figura-14 { background-color: #FF5733; }
+.figura-15 { background-color: #33FF57; }
+.figura-16 { background-color: #7f23ff; }
+
+/*Personalizacion de la alerta*/
+.alerta {
+  position: fixed;
+  top: 50%;
+  left: 25%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeInOut 3s forwards;
+  text-align: center;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
