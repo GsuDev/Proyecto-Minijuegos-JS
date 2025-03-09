@@ -1,54 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="resources/styles/style.css">
-    <link rel="stylesheet" href="resources/styles/buttons.css">
-    <title>Retro JS Calculator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="resources/styles/style.css">
+  <link rel="stylesheet" href="resources/styles/buttons.css">
+  <title>Retro JS Calculator</title>
 </head>
+
 <body>
-    <header>
-        <h1>Retro JS Calculator</h1>
-    </header>
+  <header>
+    <h1>Retro JS Calculator</h1>
+  </header>
 
-    <main>
+  <main>
 
-        <!-- Caja gris exterior -->
-        <div class="calculator-container">
-            <!-- Caja beige interna -->
-            <div class="calculator-body">
+    <!-- Caja gris exterior -->
+    <div class="calculator-container">
+      <!-- Caja beige interna -->
+      <div class="calculator-body">
 
-                <!-- Caja gris del resultado-->
-                <div class="calculator-result-box" id="result">0</div>
+        <!-- Caja gris del resultado-->
+        <div class="calculator-result-box" id="result">0</div>
 
-                <!-- Contenedor de los botones -->
-                <div class="calculator-keypad">
+        <!-- Contenedor de los botones -->
+        <div class="calculator-keypad">
 
-                    <!-- Filas de botones -->
-                    <div class="keypad-row">
-                        <button onclick="memButton('MC')">MC</button><button onclick="memButton('MR')">MR</button><button onclick="memButton('M+')">M+</button><button onclick="memButton('M-')">M-</button><button onclick="clearAll()">CE</button>
-                    </div>
-                    <div class="keypad-row">
-                        <button onclick="press('7')">7</button><button onclick="press('8')">8</button><button onclick="press('9')">9</button><button onclick="opButton('/')">/</button><button onclick="opButton('^')">^</button>
-                    </div>
-                    <div class="keypad-row">
-                        <button onclick="press('4')">4</button><button onclick="press('5')">5</button><button onclick="press('6')">6</button><button onclick="opButton('x')">x</button><button onclick="opButton('%')">%</button>
-                    </div>
-                    <div class="keypad-row">
-                        <button onclick="press('1')">1</button><button onclick="press('2')">2</button><button onclick="press('3')">3</button><button onclick="opButton('-')">-</button><button onclick="opButton('sqr')">√</button>
-                    </div>
-                    <div class="keypad-row">
-                        <button onclick="press('00')">00</button><button onclick="press('0')">0</button><button onclick="press('.')">.</button><button onclick="opButton('+')">+</button><button onclick="equals()"> = </button>
-                    </div>
+          <!-- Filas de botones -->
+          <div class="keypad-row">
+            <button onclick="memButton('MC')">MC</button><button onclick="memButton('MR')">MR</button><button
+              onclick="memButton('M+')">M+</button><button onclick="memButton('M-')">M-</button><button
+              onclick="clearAll()">CE</button>
+          </div>
+          <div class="keypad-row">
+            <button onclick="press('7')">7</button><button onclick="press('8')">8</button><button
+              onclick="press('9')">9</button><button onclick="opButton('/')">/</button><button
+              onclick="opButton('^')">^</button>
+          </div>
+          <div class="keypad-row">
+            <button onclick="press('4')">4</button><button onclick="press('5')">5</button><button
+              onclick="press('6')">6</button><button onclick="opButton('x')">x</button><button
+              onclick="opButton('%')">%</button>
+          </div>
+          <div class="keypad-row">
+            <button onclick="press('1')">1</button><button onclick="press('2')">2</button><button
+              onclick="press('3')">3</button><button onclick="opButton('-')">-</button><button
+              onclick="opButton('sqr')">√</button>
+          </div>
+          <div class="keypad-row">
+            <button onclick="press('00')">00</button><button onclick="press('0')">0</button><button
+              onclick="press('.')">.</button><button onclick="opButton('+')">+</button><button onclick="equals()"> =
+            </button>
+          </div>
 
 
-                </div>
-            </div>
         </div>
+      </div>
+    </div>
 
-    </main>
-    <!-- Llamada al script -->
-    <script src="resources/scripts/script.js"></script>
+  </main>
+  <!-- Llamada al script -->
+  <script src="resources/scripts/script.js"></script>
 </body>
+
 </html>
