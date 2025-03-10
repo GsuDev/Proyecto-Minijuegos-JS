@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const gameArea = document.getElementById("gameArea");
+    const car = document.getElementById("car");
+    let carPosition = 150;
+    const laneWidth = 100;
+    let obstacles = [];
+    let gameInterval;
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowLeft" && carPosition > 50) {
+            carPosition -= laneWidth;
+        } else if (event.key === "ArrowRight" && carPosition < 250) {
+            carPosition += laneWidth;
+        }
+        car.style.left = `${carPosition}px`;
+    });
+
+    function createObstacle() {
+        const obstacle = document.createElement("div");
+        obstacle.classList.add("obstacle");
+        obstacle.style.left = `${[50, 150, 250][Math.floor(Math.random() * 3)]}px`;
+        gameArea.appendChild(obstacle);
+        obstacles.push(obstacle);
+    }
+
+    function moveObstacles() {
+        obstacles.forEach((obstacle, index) => {
+            let top = parseInt(window.getComputedStyle(obstacle).getPropertyValue("top"));
+            if (top >= 400) {
+                obstacle.remove();
+                obstacles.splice(index, 1);
+            } else {
+                obstacle.style.top = `${top + 5}px`;
+            }
+
+            if (top > 300 && top < 350 && parseInt(obstacle.style.left) === carPosition) {
+                clearInterval(gameInterval);
+                alert("¡Has chocado! Fin del juego.");
+                location.reload();
+            }
+        });
+    }
+
+    function gameLoop() {
+        createObstacle();
+        moveObstacles();
+    }
+
+    gameInterval = setInterval(gameLoop, 1000);
+});
+    </script>
+</body>
+</html>
